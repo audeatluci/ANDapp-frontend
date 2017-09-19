@@ -20,12 +20,12 @@ class UserInfo extends React.Component {
     console.log(this.state);
     return (
       <div className="UserInfo">
-        <h3>Hey {this.state.name} {this.state.lastName}!</h3>
+        <h3>Hey {this.state.firstName} {this.state.lastName}!</h3>
         <hr />
         <h4>Details</h4>
         <ul>
-          <li>Username: {this.state.username}</li>
           <li>Age: {this.state.age}</li>
+          <li>Nationality: {this.state.nationality}</li>
         </ul>
         <hr/>
         <Link to="/">Back to all users</Link>
