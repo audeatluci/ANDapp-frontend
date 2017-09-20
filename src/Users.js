@@ -14,7 +14,8 @@ class Users extends Component {
   componentDidMount() {
     return fetch('/users')
       .then(res => res.json())
-      .then(users => this.setState({ users }));
+      .then(users => this.setState({ users }))
+      .catch(e => { throw new Error('API not returning valid JSON') });
   }
 
   render() {

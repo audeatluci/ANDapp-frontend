@@ -1,5 +1,5 @@
 # use a node base image
-FROM node:8
+FROM node:latest
 
 # set a health check
 HEALTHCHECK --interval=5s \
@@ -18,6 +18,6 @@ COPY yarn.lock .
 # tell docker what port to expose
 EXPOSE 3000 
 
-RUN npm install
+RUN npm install --silent
 
 CMD npm start
